@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LR Kids Park Run</title>
+
+  <!-- PWA Meta Tags -->
+  <meta name="application-name" content="LR Kids Park Run">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="LR Kids Run">
+  <meta name="theme-color" content="#FF6B1A">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Apple Touch Icon (for iPhone home screen) -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icon-192.png">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: sans-serif;
+      color: white;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 32px rgba(255,107,26,0.4);
+    }
+    .title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #FF6B1A;
+      margin-bottom: 6px;
+    }
+    .sub {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 32px;
+    }
+    .loader {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255,107,26,0.2);
+      border-top-color: #FF6B1A;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <img class="logo" src="icon-192.png" alt="LR Kids Park Run">
+  <div class="title">LR Kids Park Run</div>
+  <div class="sub">Loading...</div>
+  <div class="loader"></div>
+
+  <script>
+    // Redirect to Apps Script after brief splash
+    // Auto redirect after delay
+let redirectTimer = setTimeout(function() {
+      window.location.replace("https://script.google.com/macros/s/AKfycbzYZ5nscfNhwCWK8rX_aSTNH9UYWqyyXmVBUKwq88zqNRrMHVtnnPMU5Iir5M3Za892/exec");
+    }, 800);
+  </script>
+</body>
+</html>
